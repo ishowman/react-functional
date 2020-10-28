@@ -42,3 +42,16 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+# React 函数式组件 props
+函数式组件中， props 等同于函数参数:
+```javascript
+function App(props) {
+    return (
+        < ...props />
+    )
+}
+```
+children 是特殊的 prop 属性，等同于 Vue 的默认插槽。
+Vue 的具名插槽，在 react 中是通过定义 prop 属性实现的。参考 Modal 组件的 footer。
