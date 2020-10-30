@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-
+import ReactDOM from 'react-dom'
 
 class ModalProps {
     title: string = ''
@@ -11,13 +11,13 @@ function Modal(props: ModalProps) {
         title,
         footer
     } = props
-    return (
-      <div className="App">
+    return ReactDOM.createPortal(
+      (<div className="Modal">
         <p>{title}</p>
         <div className="footer">
             {footer}
         </div>
-      </div>
+      </div>), document.querySelector('body')!
     );
   }
   
