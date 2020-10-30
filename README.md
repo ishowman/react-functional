@@ -42,3 +42,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# useEffect
+特性：
+- 在每次渲染后执行，是异步执行（同步可以使用 `useLayoutEffect` ）
+- `useEffect` 可以通过在内部返回函数，来清楚副作用（返回函数在组件卸载时执行）
+- 可以通过指定第二个参数作为依赖项，在依赖项变化时才执行回调（用 vue 类比的话，更适合 vue 中 watch 的场景而不是 computed ）
+- 同个组件内可以存在多个 useEffect，按顺序执行
