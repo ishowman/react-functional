@@ -12,7 +12,6 @@ function App() {
   let inputEl = useRef<any>(null)
 
   const handleClick = () => {
-    // console.log( inputEl.current?.target)
     console.log( inputEl.current.value)
   }
 
